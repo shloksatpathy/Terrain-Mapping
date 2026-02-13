@@ -12,5 +12,7 @@ on furthur advancements we will be working on devloping a python library for dat
     meta data extracted include the :-
     1) name of the tif file
     2) number of bands in the tif file 
-    3) height and width of the tif file 
+    3) height and width of the tif file
+    4) the centre of the cordinate reference system 
+    5) the affine transform matrix for the tif file  
 }
