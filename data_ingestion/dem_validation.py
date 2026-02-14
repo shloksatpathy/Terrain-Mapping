@@ -1,7 +1,7 @@
 import rasterio
 import matplotlib.pyplot as plt
 
-with rasterio.open(r"F:\Terrain Mapping\input-resources\n21_e083_3arc_v2.tif") as src:
+with rasterio.open(r"F:\Terrain Mapping\input-resources\LC09_L2SP_141045_20260130_20260131_02_T1_SR_B3.TIF") as src:
     dem = src.read(1)
 
 plt.imshow(dem, cmap="terrain")

@@ -11,3 +11,4 @@ venv*
 data_ingestion/data.txt
 input_resources
 input_resources/
+data_ingestion/processed
