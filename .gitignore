@@ -12,3 +12,4 @@ data_ingestion/data.txt
 input-resources
 input-resources/
 data_ingestion/processed
+data_ingestion/raw
