@@ -8,7 +8,6 @@ env.bak/
 venv.bak/
 .venv*
 venv*
-data_ingestion/data.txt
-input-resources
-input-resources/
-data_ingestion/processed
+raw/
+processed/
+data.txt
