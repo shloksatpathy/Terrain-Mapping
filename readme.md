@@ -68,7 +68,7 @@ Download it yourself and place it in an `input-resources/` folder at the repo ro
 `del_ndvi.py` also reads Landsat scenes `LC08_L2SP_140044_20251230_20260106_02_T1` and
 `LC09_L2SP_140044_20250629_20250630_02_T2` (bands B4, B5) from `data_ingestion/raw/day_0` and `data_ingestion/raw/day_1`.
 
-> **Note:** scripts currently use absolute Windows paths (`F:\Terrain Mapping\...`). Update them to match where you put the data.
+Scripts read the data through relative paths (`../input-resources/`, `raw/day_0/`), so run them from inside `data_ingestion/`.
 
 ## Usage
 
@@ -102,7 +102,7 @@ Computes NDVI = (NIR − Red) / (NIR + Red) using B5 and B4, and plots it with a
 Computes NDVI for two acquisition dates and plots their difference (ΔNDVI) to highlight vegetation change over time.
 
 ### `dem_validation.py`
-Plots a raster with a terrain colour map for quick visual inspection.
+Plots the SRTM DEM with a terrain colour map for quick visual inspection.
 
 ### `dem_normalisation.py`
 Loads the SRTM DEM, masks nodata and out-of-range elevations (below −1000 m or above 9000 m), and normalises it. Exposes `dem_norm` for other scripts.
@@ -116,7 +116,7 @@ Builds a PyVista structured grid from `dem_norm`, applies 30× vertical exaggera
 - [x] RGB composite
 - [x] NDVI and multi-temporal ΔNDVI
 - [x] DEM normalisation and 3D mesh
-- [ ] Relative paths / config for input data
+- [x] Relative paths for input data
 - [ ] Coordinate-aware mesh generation
 - [ ] Texture mapping (drape RGB/NDVI onto the 3D terrain)
 - [ ] Package as a reusable Python library

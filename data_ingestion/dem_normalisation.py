@@ -1,6 +1,6 @@
 import rasterio
 import numpy as np
-with rasterio.open(r"F:\Terrain Mapping\input-resources\n21_e083_3arc_v2.tif") as src:
+with rasterio.open(r"../input-resources/n21_e083_3arc_v2.tif") as src:
     dem = src.read(1).astype(np.float32)
 
     nodata = src.nodata
@@ -16,7 +16,7 @@ dem[dem > 9000] = np.nan
 
 
 # Normalize elevation
-dem_norm = (dem - np.nanmin(dem)) / np.nanmax(dem) - np.nanmin(dem)
+dem_norm = (dem - np.nanmin(dem)) / (np.nanmax(dem) - np.nanmin(dem))
 
 dem_norm = np.nan_to_num(dem_norm)
 

@@ -1,6 +1,6 @@
 import rasterio 
 
-dataset = rasterio.open("F:\Terrain Mapping\input-resources\LC08_L2SP_141045_20260122_20260130_02_T1_SR_B1.TIF")
+dataset = rasterio.open("../input-resources/LC08_L2SP_141045_20260122_20260130_02_T1_SR_B1.TIF")
 
 data = [
     dataset.name,

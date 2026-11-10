@@ -2,8 +2,8 @@ import rasterio
 import numpy as np 
 import matplotlib.pyplot as plt 
 
-red = rasterio.open("F:\Terrain Mapping\input-resources\LC09_L2SP_141045_20260130_20260131_02_T1_SR_B4.TIF").read(1).astype(float)
-nir = rasterio.open("F:\Terrain Mapping\input-resources\LC09_L2SP_141045_20260130_20260131_02_T1_SR_B5.TIF").read(1).astype(float)
+red = rasterio.open("../input-resources/LC09_L2SP_141045_20260130_20260131_02_T1_SR_B4.TIF").read(1).astype(float)
+nir = rasterio.open("../input-resources/LC09_L2SP_141045_20260130_20260131_02_T1_SR_B5.TIF").read(1).astype(float)
 
 #avoiding division by 0
 

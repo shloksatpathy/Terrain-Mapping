@@ -2,9 +2,9 @@ import rasterio
 import numpy as np 
 import matplotlib.pyplot as plt 
 
-red = rasterio.open("F:\Terrain Mapping\input-resources\LC09_L2SP_141045_20260130_20260131_02_T1_SR_B4.TIF").read(1).astype(float)
-green = rasterio.open("F:\Terrain Mapping\input-resources\LC09_L2SP_141045_20260130_20260131_02_T1_SR_B3.TIF").read(1).astype(float)
-blue = rasterio.open("F:\Terrain Mapping\input-resources\LC09_L2SP_141045_20260130_20260131_02_T1_SR_B2.TIF").read(1).astype(float)
+red = rasterio.open("../input-resources/LC09_L2SP_141045_20260130_20260131_02_T1_SR_B4.TIF").read(1).astype(float)
+green = rasterio.open("../input-resources/LC09_L2SP_141045_20260130_20260131_02_T1_SR_B3.TIF").read(1).astype(float)
+blue = rasterio.open("../input-resources/LC09_L2SP_141045_20260130_20260131_02_T1_SR_B2.TIF").read(1).astype(float)
 
 #stacking of float values as RGB pixels
 rgb = np.dstack((red, green, blue))
